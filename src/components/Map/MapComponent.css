@@ -1,0 +1,28 @@
+/* MapComponent.css */
+
+.redirect-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Some padding */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* 3D effect */
+    cursor: pointer; /* Pointer/hand icon */
+    font-size: 14px; /* Increase font size */
+    transition: all 0.3s ease; /* Animation */
+  }
+  
+  .redirect-button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: translateY(-2px); /* Move button up on hover */
+  }
+  
+  .mapboxgl-popup-content {
+    pointer-events: all; /* Allow interactions with the popup content */
+  }
+
+  .popup-content {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  

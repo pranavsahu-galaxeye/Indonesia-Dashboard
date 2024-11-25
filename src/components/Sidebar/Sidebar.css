@@ -1,0 +1,129 @@
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 90px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 16px;
+  padding-right: 12px;
+
+}
+
+.sidebar.open {
+  width: 100%; /* Responsive width */
+  max-width: 350px; /* Max width */
+}
+
+.sidebar.collapsed {
+  width: 40px; /* Changed to zero width */
+}
+
+.sidebar-content {
+  width: 100%;
+  /* padding: px; */
+}
+
+.heading-3d {
+  font-size: 1.5rem; /* Responsive font size */
+  color: #f2f2f2;
+}
+
+.toggle-buttons {
+  display: flex;
+  margin: 12px;
+  justify-content: center;
+}
+
+.info-box-container {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 16px;
+  margin: 10px;
+  color: #f2f2f2;
+  text-align: center;
+  width: 45%; /* Use percentage for responsive */
+  max-width: 200px; /* Fixed width */
+  height: 90px; /* Fixed height */
+  border: 2px solid #14DFAF;  
+}
+
+.info-title {
+  font-size: 0.820rem; /* Responsive font size */
+}
+
+.info-value {
+  font-size: 1.080rem; /* Responsive font size */
+  font-weight: bold;
+}
+
+.toggle-button:hover {
+  background-color: #14DFAF; /* Hover color */
+  color: black; /* Hover text color */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .sidebar.open {
+    width: 100%;
+  }
+
+  .sidebar-content {
+    padding: 10px;
+  }
+
+  .info-box {
+    width: 45%;
+  }
+
+  .info-title {
+    font-size: 0.75rem;
+  }
+
+  .info-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-header {
+    flex-direction: column;
+  }
+
+  .info-box {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toggle-buttons button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
