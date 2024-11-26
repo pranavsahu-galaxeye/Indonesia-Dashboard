@@ -3,7 +3,7 @@
   justify-content: flex-end; /* Align the signin-background to the right */
   align-items: center;
   height: 100vh;
-  background: url('../../../public/image 80.png') no-repeat center center;
+  background: url('../../../public/palm_oil_plantations.png') no-repeat center center;
   background-size: cover;
   position: relative;
   padding: 80px;

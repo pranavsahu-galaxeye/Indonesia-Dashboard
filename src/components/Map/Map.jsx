@@ -87,12 +87,14 @@ const MapComponent = () => {
       const centroid = calculateCentroid(geometry.coordinates);
 
       if (centroid) {
+        const countryName = properties.country === "IDN" ? "Indonesia" : properties.country;
+
         setHoverInfo({
           longitude: centroid.longitude,
           latitude: centroid.latitude,
           areaHa: properties.area_ha || "N/A",
           company: properties.company || "N/A",
-          country: properties.country || "N/A",
+          country: countryName || "N/A", // Use mapped country name
         });
       }
     }
@@ -112,12 +114,14 @@ const MapComponent = () => {
       const centroid = calculateCentroid(geometry.coordinates);
 
       if (centroid) {
+        const countryName = properties.country === "IDN" ? "Indonesia" : properties.country;
+
         setPopupInfo({
           longitude: centroid.longitude,
           latitude: centroid.latitude,
           areaHa: properties.area_ha || "N/A",
           company: properties.company || "N/A",
-          country: properties.country || "N/A",
+          country: countryName || "N/A", // Use mapped country name
         });
       }
     }
@@ -199,9 +203,8 @@ const MapComponent = () => {
                 <div>
                   <p><strong>Country:</strong> {hoverInfo.country}</p>
                   <p><strong>Area (Ha):</strong> {hoverInfo.areaHa}</p>
-                  <p><strong>Company:</strong> {hoverInfo.company}</p>
                   <p>
-                    <strong>Centroid(lat, long):</strong> {hoverInfo.latitude}, {hoverInfo.longitude}
+                    <strong>Coordinates:</strong> {hoverInfo.latitude}, {hoverInfo.longitude}
                   </p>
                   <button
                     onClick={() =>
@@ -237,9 +240,8 @@ const MapComponent = () => {
                 <div>
                   <p><strong>Country:</strong> {popupInfo.country}</p>
                   <p><strong>Area (Ha):</strong> {popupInfo.areaHa}</p>
-                  <p><strong>Company:</strong> {popupInfo.company}</p>
                   <p>
-                    <strong>Centroid(lat, long):</strong> {popupInfo.latitude}, {popupInfo.longitude}
+                    <strong>Coordinates:</strong> {popupInfo.latitude}, {popupInfo.longitude}
                   </p>
                   <button
                     onClick={() =>

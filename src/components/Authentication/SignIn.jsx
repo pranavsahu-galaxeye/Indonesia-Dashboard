@@ -21,9 +21,9 @@ const SignIn = () => {
   return (
     <div className="signin-container">
       <div className="transparent-overlay">
-        <p className="overlay-text">
+        {/* <p className="overlay-text">
           "Your unbiased source of intelligence for Aquaculture, leveraging Satellite Imagery and AI"
-        </p>
+        </p> */}
       </div>
       <div className="signin-background">
         <form className="signin-form" onSubmit={handleSubmit}>

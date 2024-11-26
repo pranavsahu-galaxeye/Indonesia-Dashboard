@@ -40,8 +40,8 @@ const Sidebar = () => {
 
   const handleDownloadCSV = () => {
     const link = document.createElement('a');
-    link.href = '/Indonesia_oil_palm_concessions.csv';
-    link.download = 'Indonesia_oil_palm_concessions.csv';
+    link.href = '/Indonesia_oil_palm_concessions22.csv';
+    link.download = 'Indonesia_oil_palm_concessions22.csv';
     link.click();
   };
 
